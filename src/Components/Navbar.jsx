@@ -7,12 +7,12 @@ import {
   Flex,
 } from "@chakra-ui/react";
 
-
 import Project_Logo from "../assets/Project_Logo.png";
 const Navbar = () => {
   return (
-    <Container maxW={"80%"} border="1px solid red">
-      <Flex justifyContent="space-around">
+    // //border="1px solid red"
+    <Container maxW={"80%"} border="1px solid red" mt={"1rem"}>
+      <Flex justifyContent="space-between">
         <ChakraLink as={ReactRouterLink} to="/">
           <Box>
             <img src={Project_Logo} alt="LOGO" />
@@ -24,6 +24,8 @@ const Navbar = () => {
           display="flex"
           justifyContent="space-between"
           alignItems="center"
+          border="1px solid red"
+          fontFamily= "Poppins, sans-serif" fontWeight="500"
         >
           <Box>
             <ChakraLink as={ReactRouterLink} to="/ourstory">
@@ -36,18 +38,21 @@ const Navbar = () => {
             </ChakraLink>
           </Box>
           <Box>
-
-          <ChakraLink as={ReactRouterLink} to="/ourmission">
-            Our Mission
-          </ChakraLink>
+            <ChakraLink as={ReactRouterLink} to="/ourmission">
+              Our Mission
+            </ChakraLink>
           </Box>
           <Box>
             <ChakraLink as={ReactRouterLink} to="/about">
-                About
+              About
             </ChakraLink>
           </Box>
         </Container>
-        <Button>Sign In</Button>
+        <Box display={"flex"} justifyContent={"center"} alignItems={"center"}>
+          <ChakraLink as={ReactRouterLink} to="/login">
+            <Button>Sign In</Button>
+          </ChakraLink>
+        </Box>
       </Flex>
     </Container>
   );
