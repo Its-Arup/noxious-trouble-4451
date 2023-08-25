@@ -1,8 +1,14 @@
+import { Center, Container, Flex, Heading } from "@chakra-ui/react"
+
 const Home =()=>{
     return(
-        <>
-        <h1>HELLLO</h1>
-        </>
+        <Container>
+            <Center>
+                <Heading fontSize={"6xl"} fontFamily="Noto Sans, sans-serif" fontWeight="800">Use your maks,<br/>
+                    save the world
+                </Heading>
+            </Center>
+        </Container>
     )
 }
 
