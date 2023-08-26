@@ -50,7 +50,7 @@ const Navbar = () => {
         </Container>
         <Box display={"flex"} justifyContent={"center"} alignItems={"center"}>
           <ChakraLink as={ReactRouterLink} to="/login">
-            <Button>Sign In</Button>
+            <Button colorScheme="pink">Sign In</Button>
           </ChakraLink>
         </Box>
       </Flex>
