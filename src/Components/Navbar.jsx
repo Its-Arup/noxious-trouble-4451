@@ -11,7 +11,7 @@ import Project_Logo from "../assets/Project_Logo.png";
 const Navbar = () => {
   return (
     // //border="1px solid red"
-    <Container maxW={"80%"} border="1px solid red" mt={"1rem"}>
+    <Container maxW={"80%"} mt={"1rem"}>
       <Flex justifyContent="space-between">
         <ChakraLink as={ReactRouterLink} to="/">
           <Box>
@@ -24,7 +24,7 @@ const Navbar = () => {
           display="flex"
           justifyContent="space-between"
           alignItems="center"
-          border="1px solid red"
+          // border="1px solid red"
           fontFamily= "Poppins, sans-serif" fontWeight="500"
         >
           <Box>
