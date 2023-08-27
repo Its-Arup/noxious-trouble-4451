@@ -14,7 +14,18 @@ import {
   CardFooter,
   ButtonGroup,
   transform,
+  useDisclosure,
+  ModalBody,
+  ModalCloseButton,
+  ModalHeader,
+  ModalContent,
+  ModalOverlay,
+  Modal,
+  ModalFooter,
 } from "@chakra-ui/react";
+
+import React from "react";
+
 import star from "../assets/star_image.png";
 import profile1 from "../assets/profile_pic_1.png";
 import profile2 from "../assets/profile_pic_2.png";
@@ -26,14 +37,25 @@ import profile7 from "../assets/profile_pic_7.png";
 import profile8 from "../assets/profile_pic_8.png";
 import profile9 from "../assets/profile_pic_9.png";
 import profile10 from "../assets/profile_pic_10.png";
+import profile11 from "../assets/profile_pic_11.png";
+import profile12 from "../assets/profile_pic_12.png";
+import profile13 from "../assets/profile_pic_13.png";
+import profile14 from "../assets/profile_pic_14.png";
+import profile15 from "../assets/profile_pic_15.png";
+import profile16 from "../assets/profile_pic_16.png";
 import card1 from "../assets/card_1.png";
 import card2 from "../assets/card_2.png";
 import card3 from "../assets/card_3.png";
+import card4 from "../assets/card_4.png";
+import big1 from "../assets/big_img_1.png";
 
 const Home = () => {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const finalRef = React.useRef(null);
+
   return (
     <div
-    // border: "1px solid red",
+      // border: "1px solid red",
       style={{  margin: "50px auto 0", width: "80%" }}
     >
       <Center
@@ -129,7 +151,7 @@ const Home = () => {
           <Image src={profile6} />
         </Box>
       </Center>
-      <Center mt={"50px"} flexDirection={"column"}>
+      <Center mt={"50px"} flexDirection={"column"} >
         <Image src={profile10} />
         <Heading
           fontSize={"5xl"}
@@ -141,63 +163,255 @@ const Home = () => {
           Why does the world need <br />
           you to were a mask?
         </Heading>
-        <Box display={"flex"} justifyContent={"space-around"} w={"100%"} m={"50px"}>
-        <Card h={"400px"}>
+        <Box
+          display={"flex"}
+          justifyContent={"space-around"}
+          w={"100%"}
+          m={"50px"}
+        >
+          <Card h={"400px"}>
             <CardBody>
-              <Image
-                src={card1}
-              />
+              <Image src={card1} />
               <Stack mt="6" spacing="3">
-                <Heading size="lg">Reduce viral <br/>transmission</Heading>
+                <Heading size="lg">
+                  Reduce viral <br />
+                  transmission
+                </Heading>
                 <Text color="blackAlpha.600" lineHeight={"30px"}>
-                Lorem ipsum dolor sit amet <br/>consectetur adipisicing elit.<br/> 
-                cdolor adipisicing elit
-                </Text>
-              </Stack>
-            </CardBody>
-          </Card>
-          <Card  h={"400px"}>
-            <CardBody>
-              <Image
-                src={card2}
-              />
-              <Stack mt="6" spacing="3">
-                <Heading size="lg">Protecting others<br/> from illness</Heading>
-                <Text color="blackAlpha.600" lineHeight={"30px"}>
-                Lorem ipsum dolor sit amet <br/>consectetur adipisicing elit.<br/> 
-                cdolor adipisicing elit
+                  Lorem ipsum dolor sit amet <br />
+                  consectetur adipisicing elit.
+                  <br />
+                  cdolor adipisicing elit
                 </Text>
               </Stack>
             </CardBody>
           </Card>
           <Card h={"400px"}>
             <CardBody>
-              <Image
-                src={card3}
-              />
+              <Image src={card2} />
               <Stack mt="6" spacing="3">
-                <Heading size="lg">Mandated by law<br/> in some states</Heading>
+                <Heading size="lg">
+                  Protecting others
+                  <br /> from illness
+                </Heading>
                 <Text color="blackAlpha.600" lineHeight={"30px"}>
-                Lorem ipsum dolor sit amet <br/>consectetur adipisicing elit.<br/> 
-                cdolor adipisicing elit
+                  Lorem ipsum dolor sit amet <br />
+                  consectetur adipisicing elit.
+                  <br />
+                  cdolor adipisicing elit
                 </Text>
               </Stack>
             </CardBody>
           </Card>
-          <Card  h={"400px"}>
+          <Card h={"400px"}>
             <CardBody>
-              <Image
-                src={card1}
-              />
+              <Image src={card3} />
               <Stack mt="6" spacing="3">
-                <Heading size="lg">Good hygiene in<br/> general</Heading>
+                <Heading size="lg">
+                  Mandated by law
+                  <br /> in some states
+                </Heading>
                 <Text color="blackAlpha.600" lineHeight={"30px"}>
-                Lorem ipsum dolor sit amet <br/>consectetur adipisicing elit.<br/> 
-                cdolor adipisicing elit
+                  Lorem ipsum dolor sit amet <br />
+                  consectetur adipisicing elit.
+                  <br />
+                  cdolor adipisicing elit
                 </Text>
               </Stack>
             </CardBody>
           </Card>
+          <Card h={"400px"}>
+            <CardBody>
+              <Image src={card4} />
+              <Stack mt="6" spacing="3">
+                <Heading size="lg">
+                  Good hygiene in
+                  <br /> general
+                </Heading>
+                <Text color="blackAlpha.600" lineHeight={"30px"}>
+                  Lorem ipsum dolor sit amet <br />
+                  consectetur adipisicing elit.
+                  <br />
+                  cdolor adipisicing elit
+                </Text>
+              </Stack>
+            </CardBody>
+          </Card>
+        </Box>
+      </Center>
+
+      {/* card end here */}
+
+      <Center mt={"50px"} flexDirection={"column"}>
+        <Image src={profile11} />
+        <Heading
+          fontSize={"5xl"}
+          fontFamily="Noto Sans, sans-serif"
+          fontWeight="700"
+          textAlign={"center"}
+          p={"10px"}
+        >
+          Our Contributor
+        </Heading>
+        <Text
+          color="blackAlpha.500"
+          fontFamily={"Poppins, sans-serif"}
+          fontSize={"2xl"}
+          m={"20px"}
+          textAlign={"center"}
+          fontWeight={"500"}
+        >
+          Meet all our contributor around the globe
+        </Text>
+        <Box>
+          <Image src={big1} />
+        </Box>
+      </Center>
+
+      {/* contributor end here */}
+
+      <Center mt={"50px"} justifyContent={"space-between"}>
+        <Box>
+          <Image src={profile12} />
+          <Heading
+            fontSize={"5xl"}
+            fontFamily="Noto Sans, sans-serif"
+            fontWeight="700"
+            p={"10px"}
+          >
+            What health exparts say
+          </Heading>
+          <Text
+            color="blackAlpha.500"
+            fontFamily={"Poppins, sans-serif"}
+            fontSize={"2xl"}
+            m={"20px"}
+            fontWeight={"500"}
+            lineHeight={"50px"}
+          >
+            During the COVID-19 pandemic, face masks have <br />
+            been employed as a public and personal health <br />
+            control measure against the spread of SARS-CoV-2.
+            <br />
+            As more and more countries register an uptick in <br />
+            reported cases of COVID-19
+          </Text>
+          <Box display={"flex"} justifyContent={"space-evenly"}>
+            <Button
+              colorScheme="pink"
+              w={"200px"}
+              h={"80px"}
+              borderRadius={"25px"}
+              fontSize={"2xl"}
+              mt={"2rem"}
+            >
+              Learn More
+            </Button>
+            <Box
+              display={"flex"}
+              width={"40%"}
+              justifyContent={"center"}
+              alignItems={"center"}
+            >
+              <Image src={profile14} onClick={onOpen} cursor={"pointer"} />
+              <Text
+                color="blackAlpha.500"
+                fontFamily={"Poppins, sans-serif"}
+                fontSize={"xl"}
+                fontWeight={"500"}
+              >
+                Watch Video
+              </Text>
+            </Box>
+          </Box>
+          {/* ------ */}
+          <Modal finalFocusRef={finalRef} isOpen={isOpen} onClose={onClose}>
+            <ModalOverlay />
+            <ModalContent>
+              <ModalHeader>What health exparts say</ModalHeader>
+              <ModalCloseButton />
+              <ModalBody>
+                <iframe
+                  width="100%"
+                  height="315"
+                  src="https://www.youtube.com/embed/7DTIQL_jfuk?si=kZhWefWS5Mh0z3Z3"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
+              </ModalBody>
+              <ModalFooter>
+                <Button colorScheme="blue" mr={3} onClick={onClose}>
+                  Close
+                </Button>
+              </ModalFooter>
+            </ModalContent>
+          </Modal>
+        </Box>
+        <Box>
+          <Image src={profile13} />
+        </Box>
+      </Center>
+      {/* ------ */}
+
+      <Center mt={"50px"} justifyContent={"space-between"}>
+        <Box>
+          <Image src={profile15} />
+        </Box>
+        <Box>
+          <Image src={profile11} />
+          <Heading
+            fontSize={"5xl"}
+            fontFamily="Noto Sans, sans-serif"
+            fontWeight="700"
+            p={"10px"}
+          >
+            What health journals say
+          </Heading>
+          <Text
+            color="blackAlpha.500"
+            fontFamily={"Poppins, sans-serif"}
+            fontSize={"2xl"}
+            m={"20px"}
+            fontWeight={"500"}
+            lineHeight={"50px"}
+          >
+            During the COVID-19 pandemic, face masks have <br />
+            been employed as a public and personal health <br />
+            control measure against the spread of SARS-CoV-2.
+            <br />
+            As more and more countries register an uptick in <br />
+            reported cases of COVID-19
+          </Text>
+          <Box display={"flex"} justifyContent={"space-evenly"}>
+          <Button
+              colorScheme="pink"
+              w={"200px"}
+              h={"80px"}
+              borderRadius={"25px"}
+              fontSize={"2xl"}
+              mt={"2rem"}
+            >
+              Read More
+            </Button>
+            <Box
+              display={"flex"}
+              width={"40%"}
+              justifyContent={"center"}
+              alignItems={"center"}
+            >
+              <Image src={profile16} cursor={"pointer"} />
+              <Text
+                color="blackAlpha.500"
+                fontFamily={"Poppins, sans-serif"}
+                fontSize={"xl"}
+                fontWeight={"500"}
+              >
+                Download
+              </Text>
+            </Box>
+          </Box>
         </Box>
       </Center>
     </div>
