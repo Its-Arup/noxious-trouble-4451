@@ -5,6 +5,7 @@ import Community from "../Pages/Community";
 import Ourmission from "../Pages/Ourmission";
 import About from "../Pages/About";
 import Login from "../Pages/Login";
+import Signup from "../Pages/Signup";
 
 const AllRoutes = ()=>{
     return(
@@ -16,6 +17,7 @@ const AllRoutes = ()=>{
             <Route path="/ourmission" element={<Ourmission/>}/>
             <Route path="/about" element={<About/>}/>
             <Route path="/login" element={<Login/>}/>
+            <Route path="/signup" element={<Signup/>}/>
         </Routes>
         </>
     )
